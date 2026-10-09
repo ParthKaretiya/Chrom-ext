@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WP Screen Blur</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <img class="logo" src="../icons/icon48.png" alt="" width="34" height="34">
+      <div class="titles">
+        <h1>WP Screen Blur</h1>
+        <p id="siteLabel" class="site">This page</p>
+      </div>
+      <button id="themeBtn" class="icon-btn" type="button" aria-label="Theme: match system" title="Theme: match system">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path id="themeIcon" d="" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </header>
+
+    <div id="notice" class="notice" role="status" hidden></div>
+
+    <button id="selectBtn" class="primary" type="button">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 7V4.5A1.5 1.5 0 0 1 4.5 3H7M13 3h2.5A1.5 1.5 0 0 1 17 4.5V7M17 13v2.5a1.5 1.5 0 0 1-1.5 1.5H13M7 17H4.5A1.5 1.5 0 0 1 3 15.5V13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="10" cy="10" r="2.2" fill="currentColor"/></svg>
+      <span>Select Area to Blur</span>
+      <kbd>Alt+Shift+B</kbd>
+    </button>
+
+    <div class="pair">
+      <button id="clearBtn" class="secondary" type="button">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 6h11M8 6V4.5h4V6M6 6l.6 9.5h6.8L14 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Clear All Blurs</span>
+      </button>
+      <button id="toggleBtn" class="secondary" type="button" aria-pressed="true">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 10s3-6 8-6 8 6 8 6-3 6-8 6-8-6-8-6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="10" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span id="toggleLabel">Disable Blur</span>
+      </button>
+    </div>
+
+    <section class="card" aria-labelledby="strengthLabel">
+      <div class="row">
+        <label id="strengthLabel" for="intensity">Blur strength</label>
+        <output id="intensityOut" for="intensity">8 px</output>
+      </div>
+      <input id="intensity" type="range" min="2" max="20" step="1" value="8">
+      <div class="ticks" aria-hidden="true"><span>2 px</span><span>20 px</span></div>
+      <div class="preview" aria-hidden="true">
+        <div class="sample">
+          <span class="avatar"></span>
+          <span class="lines">
+            <span class="name">Maria Lopez</span>
+            <span class="msg">Invoice #20418 is overdue</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card options" aria-label="Options">
+      <label class="switch">
+        <input id="keepSelecting" type="checkbox">
+        <span class="track" aria-hidden="true"></span>
+        <span class="text">Stay in selection mode<small>Keep drawing areas until you press Esc</small></span>
+      </label>
+      <label class="switch">
+        <input id="remember" type="checkbox">
+        <span class="track" aria-hidden="true"></span>
+        <span class="text">Remember blurs on this page<small>Saved on this device only</small></span>
+      </label>
+    </section>
+
+    <section class="card areas" aria-labelledby="areasTitle">
+      <h2 id="areasTitle">Blurred areas on this page <span id="areaCount" class="count">0</span></h2>
+      <ul id="areaList" class="area-list"></ul>
+      <p id="areaEmpty" class="empty">Nothing is blurred yet. Choose Select Area to Blur, then drag over what you want to hide.</p>
+    </section>
+
+    <footer class="foot">Blur is visual only. The page's text is still there for copy, search and screen readers.</footer>
+  </main>
+
+  <script src="../shared/constants.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,19 +1,54 @@
 {
   "manifest_version": 3,
-  "name": "WhatsApp Area Blur",
+  "name": "WP Screen Blur",
   "version": "1.0.0",
-  "description": "Select any area on WhatsApp Web and blur, hide, or clear it.",
-  "permissions": ["activeTab"],
-  "host_permissions": ["https://web.whatsapp.com/*"],
-  "action": {
-    "default_title": "WhatsApp Area Blur",
-    "default_popup": "popup.html"
+  "description": "Drag to select any area of a webpage and blur it. Hide names, messages, photos and other private details before you share your screen.",
+  "minimum_chrome_version": "105",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   },
+  "action": {
+    "default_title": "WP Screen Blur",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/service-worker.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
   "content_scripts": [
     {
-      "matches": ["https://web.whatsapp.com/*"],
-      "js": ["content.js"],
-      "run_at": "document_idle"
+      "matches": ["<all_urls>"],
+      "js": [
+        "shared/constants.js",
+        "content/utils.js",
+        "content/store.js",
+        "content/locator.js",
+        "content/root.js",
+        "content/regions.js",
+        "content/selection.js",
+        "content/main.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false,
+      "match_about_blank": false
     }
-  ]
+  ],
+  "commands": {
+    "start-selection": {
+      "suggested_key": {
+        "default": "Alt+Shift+B",
+        "mac": "Alt+Shift+B"
+      },
+      "description": "Select an area to blur"
+    }
+  }
 }
