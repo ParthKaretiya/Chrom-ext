@@ -1,5 +1,5 @@
 /*
- * WP Screen Blur - region manager.
+ * Screen Blur - region manager.
  *
  * A "region" is one blurred area. Two kinds exist:
  *  - "elements": the selection tightly wrapped whole elements, so those elements get

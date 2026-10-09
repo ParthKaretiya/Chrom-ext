@@ -1,5 +1,5 @@
 /*
- * WP Screen Blur - drag-to-select mode.
+ * Screen Blur - drag-to-select mode.
  *
  * While selection mode is active a transparent capture layer covers the viewport so
  * the page (and any iframe) never receives the drag. Wheel scrolling is forwarded to
@@ -199,7 +199,7 @@
     try {
       accepted = options.onComplete(rect) !== false;
     } catch (error) {
-      console.error('[WP Screen Blur]', error);
+      console.error('[Screen Blur]', error);
     }
 
     if (accepted && options.shouldContinue()) {
@@ -289,7 +289,7 @@
     try {
       finished.options.onEnd(reason);
     } catch (error) {
-      console.error('[WP Screen Blur]', error);
+      console.error('[Screen Blur]', error);
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * WP Screen Blur - DOM locator.
+ * Screen Blur - DOM locator.
  * Everything that needs to understand the page structure lives here:
  *  - choosing the element a blurred area is anchored to,
  *  - deciding whether a selection can be blurred by filtering whole elements,

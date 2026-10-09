@@ -1,5 +1,5 @@
 /*
- * WP Screen Blur - small, dependency-free helpers used by the other content files.
+ * Screen Blur - small, dependency-free helpers used by the other content files.
  */
 (function () {
   'use strict';

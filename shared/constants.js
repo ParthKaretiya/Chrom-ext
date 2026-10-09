@@ -1,5 +1,5 @@
 /*
- * WP Screen Blur - shared constants.
+ * Screen Blur - shared constants.
  * Loaded by the content scripts, the popup and the service worker, so it only
  * depends on `globalThis` and exposes everything under `WPSB.Shared`.
  */

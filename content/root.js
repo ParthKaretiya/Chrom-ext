@@ -1,5 +1,5 @@
 /*
- * WP Screen Blur - overlay root.
+ * Screen Blur - overlay root.
  * One custom element appended to <html>, with a closed Shadow DOM, holds every
  * piece of extension UI that lives inside a web page (blur overlays, the selection
  * rectangle, the remove button, toasts). The page's CSS cannot reach into it and it

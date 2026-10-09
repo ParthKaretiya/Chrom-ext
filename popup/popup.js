@@ -1,5 +1,5 @@
 /*
- * WP Screen Blur - popup controller.
+ * Screen Blur - popup controller.
  * Talks to the content script of the active tab (injecting it first if the tab was
  * opened before the extension was installed) and stores global settings.
  */
@@ -257,7 +257,7 @@
   }
 
   init().catch(function (error) {
-    console.error('[WP Screen Blur]', error);
+    console.error('[Screen Blur]', error);
     showNotice('Something went wrong while opening the popup. Close it and try again.');
   });
 })();

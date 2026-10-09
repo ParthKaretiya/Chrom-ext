@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔒 WP Screen Blur
+# 🔒 Screen Blur
 
 **A high-performance, universal Chrome extension to blur sensitive information on *any* webpage in real time before sharing your screen or taking screenshots.**
 
@@ -26,7 +26,7 @@
 
 ## 📖 Overview
 
-**WP Screen Blur** is an advanced, lightweight Chrome extension built on **Manifest V3** that allows you to drag-and-select any area or element on **any website** and blur it instantly.
+**Screen Blur** is an advanced, lightweight Chrome extension built on **Manifest V3** that allows you to drag-and-select any area or element on **any website** and blur it instantly.
 
 Whether you are:
 - Sharing your screen on Zoom, Google Meet, Microsoft Teams, or Discord,
@@ -34,9 +34,9 @@ Whether you are:
 - Working in public spaces (cafes, co-working spaces, flights), or
 - Taking screenshots of dashboards, chats, invoices, or customer data,
 
-**WP Screen Blur** keeps sensitive information (names, emails, credit cards, profile pictures, API tokens, phone numbers, and balances) private and hidden from view.
+**Screen Blur** keeps sensitive information (names, emails, credit cards, profile pictures, API tokens, phone numbers, and balances) private and hidden from view.
 
-Unlike basic extensions that only work on one site or break when pages scroll, WP Screen Blur works across **all websites** (WhatsApp Web, Gmail, LinkedIn, Slack, Twitter/X, Stripe, AWS Console, CRM portals, etc.) and uses an intelligent dual-blur engine that anchors blurs to internal scroll containers.
+Unlike basic extensions that only work on one site or break when pages scroll, Screen Blur works across **all websites** (WhatsApp Web, Gmail, LinkedIn, Slack, Twitter/X, Stripe, AWS Console, CRM portals, etc.) and uses an intelligent dual-blur engine that anchors blurs to internal scroll containers.
 
 ---
 
@@ -80,7 +80,7 @@ Install in Google Chrome, Microsoft Edge, Brave, or any Chromium-based browser i
    - Select the repository root folder (the folder containing `manifest.json`).
 
 5. **Pin to Toolbar**:
-   - Click the extensions puzzle icon in your browser toolbar and pin **WP Screen Blur** for quick access.
+   - Click the extensions puzzle icon in your browser toolbar and pin **Screen Blur** for quick access.
 
 ---
 
@@ -107,7 +107,7 @@ Install in Google Chrome, Microsoft Edge, Brave, or any Chromium-based browser i
 ## 🧠 How It Works Under the Hood
 
 ### Dual-Blur Engine Architecture
-WP Screen Blur dynamically selects the best rendering mechanism depending on what you select:
+Screen Blur dynamically selects the best rendering mechanism depending on what you select:
 
 ```
                           User Selection Box
@@ -169,7 +169,7 @@ Chrom-ext/
 | `activeTab` & `scripting` | Allows on-demand injection of content scripts into tabs opened prior to extension installation. |
 | `<all_urls>` | Allows content scripts to run across websites so that saved blurs can be restored automatically when you revisit pages. |
 
-> **Privacy Guarantee**: WP Screen Blur makes **zero network requests**, includes **no external tracking or analytics**, and sends **no data outside your machine**. All processing and storage occur entirely within your local browser instance.
+> **Privacy Guarantee**: Screen Blur makes **zero network requests**, includes **no external tracking or analytics**, and sends **no data outside your machine**. All processing and storage occur entirely within your local browser instance.
 
 ---
 

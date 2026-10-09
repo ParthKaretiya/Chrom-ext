@@ -1,5 +1,5 @@
 /*
- * WP Screen Blur - service worker.
+ * Screen Blur - service worker.
  * Responsibilities: first-run defaults, the Alt+Shift+B shortcut, the per-tab badge
  * with the number of blurred areas, and pruning old per-page data. All blur logic
  * lives in the content scripts.
@@ -19,7 +19,7 @@ async function pruneStoredPages() {
     const stale = pages.slice(Shared.MAX_STORED_PAGES).map(function (p) { return p.key; });
     if (stale.length) await chrome.storage.local.remove(stale);
   } catch (error) {
-    console.warn('[WP Screen Blur] Could not prune stored pages:', error);
+    console.warn('[Screen Blur] Could not prune stored pages:', error);
   }
 }
 
@@ -29,7 +29,7 @@ chrome.runtime.onInstalled.addListener(async function () {
     const stored = await chrome.storage.local.get(key);
     await chrome.storage.local.set({ [key]: Shared.normalizeSettings(stored[key]) });
   } catch (error) {
-    console.warn('[WP Screen Blur] Could not write default settings:', error);
+    console.warn('[Screen Blur] Could not write default settings:', error);
   }
   pruneStoredPages();
 });

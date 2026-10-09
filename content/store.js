@@ -1,5 +1,5 @@
 /*
- * WP Screen Blur - persistence.
+ * Screen Blur - persistence.
  * Settings are global; blurred regions are stored per page (origin + path) in
  * chrome.storage.local, on this device only. Everything read back from storage
  * is validated, so corrupted or hand-edited data can never break a page.
@@ -97,7 +97,7 @@
       try {
         await chrome.storage.local.set({ [Shared.STORAGE_SETTINGS_KEY]: next });
       } catch (error) {
-        console.warn('[WP Screen Blur] Could not save settings:', error);
+        console.warn('[Screen Blur] Could not save settings:', error);
       }
     }
     return next;
@@ -132,7 +132,7 @@
         await chrome.storage.local.set({ [name]: { updated: Date.now(), regions: regions } });
       }
     } catch (error) {
-      console.warn('[WP Screen Blur] Could not save blurred areas:', error);
+      console.warn('[Screen Blur] Could not save blurred areas:', error);
     }
   }
 
@@ -141,7 +141,7 @@
     try {
       await chrome.storage.local.remove(storageKey(key));
     } catch (error) {
-      console.warn('[WP Screen Blur] Could not clear saved areas:', error);
+      console.warn('[Screen Blur] Could not clear saved areas:', error);
     }
   }
 

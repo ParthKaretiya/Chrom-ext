@@ -1,4 +1,4 @@
-/* WP Screen Blur popup. Light by default; dark via system preference or the theme button. */
+/* Screen Blur popup. Light by default; dark via system preference or the theme button. */
 :root {
   --bg: #eaf0f6;
   --surface: #ffffff;

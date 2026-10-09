@@ -1,5 +1,5 @@
 /*
- * WP Screen Blur - content script entry point.
+ * Screen Blur - content script entry point.
  * Wires the popup/service-worker messages to the region manager and selection mode,
  * keeps settings in sync across tabs, follows single-page-app navigation and shuts
  * itself down cleanly when the extension is reloaded or updated.
@@ -46,7 +46,7 @@
     try {
       result = Regions.createFromRect(rect);
     } catch (error) {
-      console.error('[WP Screen Blur]', error);
+      console.error('[Screen Blur]', error);
       Root.toast('Could not blur that area. Try a slightly different selection.');
       return false;
     }
@@ -191,6 +191,6 @@
   urlTimer = setInterval(tick, 1000);
 
   ready = init().catch(function (error) {
-    console.error('[WP Screen Blur] Failed to start:', error);
+    console.error('[Screen Blur] Failed to start:', error);
   });
 })();
